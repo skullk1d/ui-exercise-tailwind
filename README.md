@@ -1,29 +1,70 @@
-# UI Exercise
-A UI exercise for UI applicants at OneMain
+# Getting Started with Create React App
 
-Use the design files in this repository to build a simple solution, similar to one you might encounter working for us. Please match the design as closely as you are able.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Assume the form submits to a secure backend. 
-- All fields are required, though the form changes depending on if you are planing to use a debit card or bank account.
-- Account, routing, and credit card numbers, as well as CVV, should be numbers only.
-- CVV should be exactly 3 numbers.
-- Routing number should be no more than 9 numbers.
+## Available Scripts
 
-Get as close to the design as you can using whatever libraries/frameworks you’re most comfortable.  If you have any questions, feel free to ask.
+In the project directory, you can run:
 
-**_Try not to spend more than a few hours on this, but feel free space it out over a couple of days._** We know a work/life balance is important and exercises like this just add on to that.
+### `npm start`
 
-We’re just looking for a simple front-end only implementation of this.  Assume that the actual form submits to a secure backend. The only validations we’re looking for are the ones spelled out in the description.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Your response should be a folder containing any HTML, CSS, and JS you’ve written.  We should be able to just open the index file directly (file:///./ui_exercise/solution/index.html) or via a http server [http://localhost/index.html] to view and use the exercise.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Feel free to return the folder as a zip file or upload it to your GitHub. Either way, please let me know when you’ve completed the exercise so that we can evaluate your work.
+### `npm test`
 
-### What we're looking for
-- How close did you get to the design?
-- Do all of the validations work?
-- Is the user experience simple and intuitive?
-- Is the code clean and readable?
-- How does the UI behave across different platforms/devices - desktop, mobile, tablet?
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-If you have any additional questions or need assistance, please reach out as soon as possible.
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
