@@ -6,9 +6,11 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>One-time Loan Payment</h1>
-      <h3>Fill out the form below to complete your payment.</h3>
-      <Form />
+      <div className="container w-[350px] lg:w-[650px]">
+        <h1 className="text-3xl font-semibold">One-time Loan Payment</h1>
+        <h3>Fill out the form below to complete your payment.</h3>
+        <Form />
+      </div>
     </div>
   );
 }
