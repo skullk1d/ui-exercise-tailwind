@@ -1,6 +1,9 @@
 import React from "react";
 import * as Form from "@radix-ui/react-form";
 import * as RadioGroup from "@radix-ui/react-radio-group";
+import { validateAccountNumber } from "./utils";
+
+const ROUTING_LEN = 9;
 
 const FormDemo = () => (
   <Form.Root className="w-[260px]">
@@ -17,7 +20,7 @@ const FormDemo = () => (
         </Form.Message>
         <Form.Message
           className="text-[13px] text-white opacity-[0.8]"
-          match="typeMismatch"
+          match={(value) => !validateAccountNumber(value)}
         >
           Please provide a valid Loan Account Number
         </Form.Message>
@@ -88,9 +91,9 @@ const FormDemo = () => (
         </Form.Message>
         <Form.Message
           className="text-[13px] text-white opacity-[0.8]"
-          match="typeMismatch"
+          match={(value) => !validateAccountNumber(value, ROUTING_LEN)}
         >
-          Please provide a valid Routing Number
+          Please provide a valid 9-digit Routing Number
         </Form.Message>
       </div>
       <Form.Control asChild>
