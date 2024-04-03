@@ -26,7 +26,7 @@ const FormDemo = () => {
         name="loan-account-number"
       >
         <div className="flex items-baseline justify-between">
-          <Form.Label className="text-[12px] font-semibold leading-[35px] text-black">
+          <Form.Label className="text-[12px] font-semibold leading-none text-black">
             Loan Account Number
           </Form.Label>
           <Form.Message
@@ -51,17 +51,17 @@ const FormDemo = () => {
         </Form.Control>
       </Form.Field>
       <Form.Field
-        className="col-span-1 lg:col-span-2 border-t border-r border-l p-[5px]"
+        className="col-span-1 w-[360px] lg:col-span-2 border-t border-r border-l p-[5px]"
         name="account-type"
       >
         <div className="flex items-baseline justify-between">
-          <Form.Label className="text-[12px] font-semibold leading-[35px] text-black">
+          <Form.Label className="text-[12px] font-semibold leading-none text-black">
             Type of Account:
           </Form.Label>
         </div>
         <Form.Control asChild>
           <RadioGroup.Root
-            className="flex flex-row gap-2.5"
+            className="flex flex-row gap-[35px]"
             defaultValue="checking"
             aria-label="View density"
             required
@@ -76,7 +76,7 @@ const FormDemo = () => {
                 <RadioGroup.Indicator className="flex items-center justify-center w-full h-full relative after:content-[''] after:block after:w-[5px] after:h-[5px] after:rounded-[50%] after:bg-white" />
               </RadioGroup.Item>
               <label
-                className="text-black text-[12px] leading-none pl-[15px]"
+                className="text-black text-[14px] leading-none pl-[5px]"
                 htmlFor="r1"
               >
                 Checking
@@ -91,7 +91,7 @@ const FormDemo = () => {
                 <RadioGroup.Indicator className="flex items-center justify-center w-full h-full relative after:content-[''] after:block after:w-[5px] after:h-[5px] after:rounded-[50%] after:bg-white" />
               </RadioGroup.Item>
               <label
-                className="text-black text-[12px] leading-none pl-[15px]"
+                className="text-black text-[14px] leading-none pl-[5px]"
                 htmlFor="r2"
               >
                 Debit Card
@@ -100,13 +100,26 @@ const FormDemo = () => {
           </RadioGroup.Root>
         </Form.Control>
       </Form.Field>
-      <div className="col-span-1 lg:row-span-4 border-t border-r border-b p-[5px]"></div>
+      <div
+        className="w-[295px] col-span-1 lg:row-span-4 border-t border-r border-b p-[5px] bg-indigo-100 bg-no-repeat ml-[-78px]"
+        style={{
+          backgroundImage: "url(/img/check.png)",
+          backgroundPositionX: "-13px",
+          backgroundPositionY: "56px",
+        }}
+      >
+        <h3 className="text-center font-semibold text-[14px]">
+          Where can I find the routing and
+          <br />
+          account number?
+        </h3>
+      </div>
       <Form.Field
-        className="col-span-1 lg:col-span-2 border-t border-r border-l p-[5px]"
+        className="col-span-1 w-[360px] lg:col-span-2 border-t border-r border-l p-[5px]"
         name="routing-number"
       >
         <div className="flex items-baseline justify-between">
-          <Form.Label className="text-[12px] font-semibold leading-[35px] text-black">
+          <Form.Label className="text-[12px] font-semibold leading-none text-black">
             Routing Number
           </Form.Label>
           <Form.Message
@@ -131,11 +144,11 @@ const FormDemo = () => {
         </Form.Control>
       </Form.Field>
       <Form.Field
-        className="col-span-1 lg:col-span-2 border-t border-r border-l p-[5px]"
+        className="col-span-1 w-[360px] lg:col-span-2 border-t border-r border-l p-[5px]"
         name="bank-account-number"
       >
         <div className="flex items-baseline justify-between">
-          <Form.Label className="text-[12px] font-semibold leading-[35px] text-black">
+          <Form.Label className="text-[12px] font-semibold leading-none text-black">
             Bank Account Number
           </Form.Label>
           <Form.Message
@@ -160,11 +173,11 @@ const FormDemo = () => {
         </Form.Control>
       </Form.Field>
       <Form.Field
-        className="col-span-1 lg:col-span-2 border p-[5px]"
+        className="col-span-1  w-[360px] lg:col-span-2 border p-[5px]"
         name="bank-account-number-confirm"
       >
         <div className="flex items-baseline justify-between">
-          <Form.Label className="text-[12px] font-semibold leading-[35px] text-black">
+          <Form.Label className="text-[12px] font-semibold leading-none text-black">
             Confirm Bank Account Number
           </Form.Label>
           <Form.Message
@@ -192,7 +205,7 @@ const FormDemo = () => {
         asChild
         className="lg:col-span-3 md:col-span-1 sm:col-span-1"
       >
-        <button className="box-border w-full text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-semibold leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none mt-[10px]">
+        <button className="box-border w-full text-white shadow-blackA4 hover:bg-mauve3 inline-flex h-[50px] w-[200px] items-center justify-center bg-teal-500 px-[15px] font-semibold leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none mt-[10px]">
           {"Make Payment".toUpperCase()}
         </button>
       </Form.Submit>
