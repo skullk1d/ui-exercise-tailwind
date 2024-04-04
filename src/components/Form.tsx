@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as Form from "@radix-ui/react-form";
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import { validateAccountNumber } from "./utils";
@@ -7,6 +7,9 @@ const ROUTING_LEN = 9;
 
 const FormDemo = () => {
   const radioRef = useRef(null);
+
+  const [bankAccountA, setBankAccountA] = useState<string>("");
+  const [bankAccountB, setBankAccountB] = useState<string>("");
 
   useEffect(() => {
     // HOTFIX: Ducktype setCustomValidity
@@ -144,13 +147,17 @@ const FormDemo = () => {
           <input
             className="Form-Field__Form-Control__input"
             type="text"
+            onChange={(e) => setBankAccountA(e.target.value)}
             required
           />
         </Form.Control>
         <Form.Message className="Form-Field__Form-Message" match="valueMissing">
           Bank Account Number is required
         </Form.Message>
-        <Form.Message className="Form-Field__Form-Message" match="typeMismatch">
+        <Form.Message
+          className="Form-Field__Form-Message"
+          match={(value) => !validateAccountNumber(value)}
+        >
           Please provide a valid Bank Account Number
         </Form.Message>
       </Form.Field>
@@ -167,14 +174,24 @@ const FormDemo = () => {
           <input
             className="Form-Field__Form-Control__input"
             type="text"
+            onChange={(e) => setBankAccountB(e.target.value)}
             required
           />
         </Form.Control>
         <Form.Message className="Form-Field__Form-Message" match="valueMissing">
-          Bank Account Numbers must match
+          Bank Account Number is required
         </Form.Message>
-        <Form.Message className="Form-Field__Form-Message" match="typeMismatch">
+        <Form.Message
+          className="Form-Field__Form-Message"
+          match={(value) => !validateAccountNumber(value)}
+        >
           Please provide a valid Bank Account Number
+        </Form.Message>
+        <Form.Message
+          className="Form-Field__Form-Message"
+          match={(value) => bankAccountA !== bankAccountB}
+        >
+          Bank Account Numbers must match
         </Form.Message>
       </Form.Field>
       <Form.Submit

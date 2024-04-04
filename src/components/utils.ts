@@ -4,8 +4,9 @@ export const validateAccountNumber = (
 ): boolean => {
   let valid = false;
 
-  valid =
-    Number.isFinite(value) && !Number.isNaN(value) && parseInt(value) >= 0;
+  const value_ = Number(value);
+
+  valid = Number.isFinite(value_) && !Number.isNaN(value_) && value_ >= 0;
 
   if (valid && length !== undefined) {
     valid = value.length === length;
