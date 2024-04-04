@@ -1,12 +1,14 @@
 import { useState } from "react";
 import FormChecking from "./FormChecking";
 import { Account } from "./types";
+import FormDebit from "./FormDebit";
 
 const FormDemo = () => {
   const [activeAccount, setActiveAccount] = useState<Account>("Checking");
+
   return {
     Checking: <FormChecking setActiveAccount={setActiveAccount} />,
-    Debit: null,
+    Debit: <FormDebit setActiveAccount={setActiveAccount} />,
   }[activeAccount];
 };
 
